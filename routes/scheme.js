@@ -4,7 +4,7 @@ const Image = require('image-js')
 const router = Express.Router()
 
 router.get('/', async function(req, res) {
-    const image = await Image.Image.load(__dirname+'/siteIMG/screenshot.png')
+    const image = await Image.Image.load('screenshot.png')
     const colors = [[],[]]
     for (let i = 0; i < image.data.length; i+=4) {
         const color = {
