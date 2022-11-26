@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', jsonParser, async function(req, res) {
-    const Browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] })
+    const Browser = await Puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] })
     const Page = await Browser.newPage()
     try {
         await Page.goto(req.body.url)
