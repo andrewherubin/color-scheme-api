@@ -19,9 +19,9 @@ router.post('/', jsonParser, async function(req, res) {
     catch(err) {
         res.send('ERROR!')
     }
-    res.send('screenshot complete.')
     await Page.close()
     await Browser.close()
+    res.send('screenshot complete.')
 })
 
 module.exports = router
