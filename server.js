@@ -7,7 +7,7 @@ const siteRouter = require('./routes/site')
 const schemeRouter = require('./routes/scheme')
 
 app.use('/site', siteRouter)
-app.use('scheme', schemeRouter)
+app.use('/scheme', schemeRouter)
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}...`)
