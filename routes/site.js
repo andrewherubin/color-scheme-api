@@ -17,10 +17,10 @@ router.post('/', jsonParser, async function(req, res) {
         await Page.screenshot({ path: 'screenshot.png'})
         await Page.close()
         await Browser.close()
-        res.send('screenshot complete.')
+        res.json({ message: 'screenshot complete.' })
     }
     catch(err) {
-        res.send(err)
+        res.json({ message: err })
     }
 })
 
